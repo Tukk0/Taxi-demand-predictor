@@ -14,5 +14,6 @@ Data source: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 
 ## EDA
-The data is extremely dirty, has a lot of missing and nonsensical values, such as negative ride costs.  
+The data is extremely dirty, has a lot of missing and nonsensical values, such as negative ride costs and 0 passengers.  
+The [notebook](https://github.com/Tukk0/Taxi-demand-predictor/blob/main/notebooks/EDA.ipynb) with explanations.  
 In progress...
