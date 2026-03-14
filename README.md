@@ -19,6 +19,6 @@ The [notebook](https://github.com/Tukk0/Taxi-demand-predictor/blob/main/notebook
 
 After rigorous data cleaning process every feature was inspected by itself and cleaned of outliers.  
 Kolmogorov-Smirnov and Anderson-Darling tests were used to come to the conclusion that the distribution of ride durations (in hours) is lognormal.  
-[Duration hours density](pictures/duration_hours_density.png)
+![Duration hours density](pictures/duration_hours_density.png)
 
 In progress...
