@@ -40,12 +40,19 @@ Data dictionary from the official [website](https://www.nyc.gov/site/tlc/about/t
 The data is extremely dirty, has a lot of missing and nonsensical values, such as negative ride costs and 0 passengers.  
 The [notebook](https://github.com/Tukk0/Taxi-demand-predictor/blob/main/notebooks/EDA.ipynb) with explanations.  
 
-The interesting problems with data include pairs of rows, in which trip data is the same, but the monetary values are opposite:  
+The interesting problems with data include:  
+- pairs of rows, in which trip data is the same, but the monetary values are opposite:  
+
 | # | VendorID | tpep_pickup_datetime | tpep_dropoff_datetime | passenger_count | trip_distance | RatecodeID | store_and_fwd_flag | PULocationID | DOLocationID | payment_type | fare_amount | extra | mta_tax | tip_amount | tolls_amount | improvement_surcharge | total_amount | congestion_surcharge | Airport_fee | cbd_congestion_fee |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 23 | 2 | 2025-07-01 00:10:28 | 2025-07-01 00:28:12 | 1.0 | 10.00 | 1.0 | N | 138 | 114 | 4 | -39.4 | -6.00 | -0.5 | 0.00 | 0.00 | -1.0 | -51.90 | -2.5 | -1.75 | -0.75 |
 | 24 | 2 | 2025-07-01 00:10:28 | 2025-07-01 00:28:12 | 1.0 | 10.00 | 1.0 | N | 138 | 114 | 4 | 39.4 | 6.00 | 0.5 | 0.00 | 0.00 | 1.0 | 51.90 | 2.5 | 1.75 | 0.75 |
 
+- time travellers with pickup time later than dropoff time:  
+
+| # | VendorID | tpep_pickup_datetime | tpep_dropoff_datetime | passenger_count | trip_distance | RatecodeID | store_and_fwd_flag | PULocationID | DOLocationID | payment_type | fare_amount | extra | mta_tax | tip_amount | tolls_amount | improvement_surcharge | total_amount | congestion_surcharge | Airport_fee | cbd_congestion_fee |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 275438 |	1 |	2025-07-04 09:30:00	| 2025-07-04 09:19:27 |	1.0 |	1.9 |	99.0 | 0 | 133 | 22	| 1 | 19.5 | 0.0 | 0.5 | 0.0 | 0.0 | 0.0 | 20.0 | 0.0 | 0.0 |	0.0 |
 
 
 After rigorous data cleaning process every feature was inspected by itself and cleaned of outliers.  
