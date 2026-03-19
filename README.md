@@ -38,7 +38,7 @@ Data dictionary from the official [website](https://www.nyc.gov/site/tlc/about/t
 
 ## EDA
 The data is extremely dirty, has a lot of missing and nonsensical values, such as negative ride costs and 0 passengers.  
-The [notebook](https://github.com/Tukk0/Taxi-demand-predictor/blob/main/notebooks/EDA.ipynb) with explanations.  
+The [html version of notebook](https://github.com/Tukk0/Taxi-demand-predictor/blob/main/notebooks/EDA.html) with explanations.  
 
 The interesting problems with data include:  
 - pairs of rows, in which trip data is the same, but the monetary values are opposite:  
